@@ -1,0 +1,170 @@
+/* Services.module.css */
+
+/* --- KEYFRAME ANIMATIONS --- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --- SECTION STYLES --- */
+.servicesSection {
+  padding: 5rem 0;
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* --- HEADER STYLES --- */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) { .sectionTitle { font-size: 3rem; } }
+.gradientText {
+  background-image: linear-gradient(90deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.sectionSubtitle {
+  color: #8b949e;
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+/* --- SERVICES GRID & CARD --- */
+.servicesGrid {
+  display: grid;
+  column-gap: 2rem;
+  row-gap: 2.5rem;
+}
+@media (min-width: 768px) { .servicesGrid { grid-template-columns: repeat(2, 1fr); row-gap: 100px; } }
+@media (min-width: 1024px) { .servicesGrid { grid-template-columns: repeat(3, 1fr);row-gap: 100px; } }
+
+.serviceCard {
+  padding: 1.5rem;
+  height: 100%;
+  display: flex; 
+  flex-direction: column; 
+  animation: fadeInUp 0.5s ease-out backwards;
+}
+
+.serviceIconWrapper {
+  display: inline-flex;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: rgba(48, 54, 61, 0.5);
+  margin-bottom: 1.5rem;
+}
+.iconPrimary { color: #38bdf8; }
+.iconAccent { color: #a78bfa; }
+.iconSuccess { color: #22c55e; }
+
+.serviceTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.serviceDescription {
+  color: #8b949e;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  flex-grow: 1; /* This is the fix: makes the description expand */
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* margin-top: auto; and padding-top have been removed */
+}
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #8b949e;
+}
+.featureIcon {
+  color: #22c55e;
+  flex-shrink: 0;
+}
+
+/* --- PROCESS SECTION --- */
+.processSection {
+  text-align: center;
+  margin-top: 5rem; 
+}
+.processTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.processGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) { .processGrid { grid-template-columns: repeat(4, 1fr); } }
+
+.processStep {
+  text-align: center;
+  animation: fadeIn 0.5s ease-out backwards;
+}
+.stepNumber {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background-color: #38bdf8;
+  color: #0d1117;
+  font-weight: 700;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+.stepTitle {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.stepDescription {
+  font-size: 0.875rem;
+  color: #8b949e;
+}
+
+/* --- CTA SECTION --- */
+.ctaSection {
+  text-align: center;
+  background-image: linear-gradient(to right, rgba(56, 189, 248, 0.1), rgba(167, 139, 250, 0.1));
+  border-radius: 0.75rem;
+  padding: 2rem;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  margin-top: 5rem;
+}
+.ctaTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.ctaText {
+  color: #8b949e;
+  margin-bottom: 1.5rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}

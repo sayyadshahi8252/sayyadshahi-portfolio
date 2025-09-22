@@ -1,0 +1,209 @@
+/* About.module.css */
+
+/* Base styles for the section */
+.aboutSection {
+  padding: 5rem 0;
+  color: #e6edf3;
+  position: relative;
+  overflow: hidden;
+  /* New: Subtle background pattern for a modern feel */
+  background-color: #161b22;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.04) 1px, transparent 0);
+  background-size: 25px 25px;
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Section Header */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) { .sectionTitle { font-size: 3rem; } }
+.gradientText {
+  background-image: linear-gradient(90deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.sectionSubtitle {
+  color: #8b949e;
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+/* Main Grid Layout */
+.gridContainer {
+  display: grid;
+  gap: 3rem;
+  align-items: flex-start;
+}
+@media (min-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Left & Right Columns */
+.aboutTextColumn, .educationColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.columnHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.iconWrapper {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background-color: rgba(56, 189, 248, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.columnTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Text and Content Styles */
+.aboutParagraph {
+  color: #8b949e;
+  line-height: 1.75;
+}
+.strongText {
+  color: #e6edf3;
+  font-weight: 600;
+}
+.highlightText {
+  color: #38bdf8;
+  font-weight: 500;
+}
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #8b949e;
+}
+
+/* Quick Stats */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.statCard {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #1c2128;
+  border: 1px solid #30363d;
+  transition: all 0.3s ease;
+}
+.statCard:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+}
+.statNumber {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+.statLabel {
+  font-size: 0.875rem;
+  color: #8b949e;
+}
+
+/* Education Timeline */
+.educationTimeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  padding-left: 1.5rem; /* Space for the line and dots */
+}
+/* New: Vertical connecting line for the timeline */
+.educationTimeline::before {
+  content: '';
+  position: absolute;
+  left: 5px; /* Aligns with center of the dot */
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background-color: #30363d;
+}
+.timelineCard {
+  background-color: #1c2128;
+  border: 1px solid #30363d;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+.timelineCard:hover {
+  transform: translateX(5px);
+  border-color: #a78bfa;
+}
+.timelineItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.timelineDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  border: 2px solid #161b22;
+}
+.dotPrimary { background-color: #38bdf8; }
+.dotAccent { background-color: #a78bfa; }
+.timelineContent { flex: 1; }
+.timelineTitle {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+.timelineSubtitle {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.subtitlePrimary { color: #38bdf8; }
+.subtitleAccent { color: #a78bfa; }
+.timelineMeta {
+  color: #8b949e;
+  font-size: 0.875rem;
+}
+
+/* Research Publication Box */
+.researchBox {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+.researchTitle {
+  font-weight: 600;
+  color: #22c55e;
+  margin-bottom: 0.5rem;
+}
+.researchText {
+  font-size: 0.875rem;
+  color: #8b949e;
+}

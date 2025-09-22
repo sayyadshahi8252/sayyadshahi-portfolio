@@ -1,0 +1,135 @@
+/* Contact.module.css */
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  50% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+}
+
+/* --- SECTION & HEADER --- */
+.contactSection {
+  padding: 5rem 0;
+  background-color: #0d1117;
+  color: #e6edf3;
+  position: relative;
+  overflow: hidden;
+}
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.sectionHeader { text-align: center; margin-bottom: 4rem; }
+.sectionTitle { font-size: 2.25rem; font-weight: 700; margin-bottom: 1rem; }
+@media (min-width: 768px) { .sectionTitle { font-size: 3rem; } }
+.gradientText { background-image: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sectionSubtitle { color: #8b949e; font-size: 1.125rem; max-width: 42rem; margin: 0 auto; }
+
+/* --- MAIN LAYOUT --- */
+.mainGrid {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: 3fr 2fr;
+    gap: 3rem;
+  }
+}
+
+/* --- FORM STYLES --- */
+.formCard {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  padding: 2rem;
+  border-radius: 0.75rem;
+}
+.form { display: flex; flex-direction: column; }
+.formRow { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+@media (min-width: 768px) { .formRow { grid-template-columns: repeat(2, 1fr); } }
+.formGroup { margin-bottom: 1.5rem; }
+.formGroup label { display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem; color: #c9d1d9; }
+.formInput, .formTextarea {
+  width: 100%;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: #e6edf3;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+.formInput::placeholder, .formTextarea::placeholder { color: #8b949e; }
+.formInput:focus, .formTextarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+}
+.formTextarea { resize: vertical; }
+.submitButton {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.75rem;
+  padding: 0.75rem 1rem; border: none; border-radius: 0.5rem; font-size: 1rem; font-weight: 600;
+  color: #ffffff; background: linear-gradient(90deg, #38bdf8, #818cf8); cursor: pointer; transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.4);
+}
+.submitButton:disabled { background: #4a5568; cursor: not-allowed; }
+.formResult { text-align: center; font-weight: 500; min-height: 1.25rem; margin-top: 1rem; color: #38bdf8; }
+
+/* --- INFO CARDS (Right Column) --- */
+.rightColumn { display: flex; flex-direction: column; gap: 2rem; }
+.infoCard {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+.infoCard:hover {
+  transform: translateY(-5px);
+  border-color: #4a5568;
+}
+.infoTitle { font-size: 1.125rem; font-weight: 600; margin-bottom: 1.5rem; color: #e6edf3; }
+.infoItem { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; color: #8b949e; text-decoration: none; transition: color 0.2s ease; }
+.infoItem:hover { color: #38bdf8; }
+.infoItem:last-child { margin-bottom: 0; }
+.infoDescription { color: #8b949e; font-size: 0.875rem; line-height: 1.6; margin-bottom: 1rem; }
+.socialsList { display: flex; gap: 1rem; }
+.socialsList a {
+  display: flex; align-items: center; justify-content: center; width: 44px; height: 44px;
+  border-radius: 9999px; background-color: #0d1117; border: 1px solid #30363d;
+  color: #8b949e; transition: all 0.2s ease;
+}
+.socialsList a:hover {
+  background-color: #38bdf8; color: #ffffff; transform: translateY(-3px); border-color: #38bdf8;
+}
+
+/* ADDED: Style for the resume button */
+.resumeButton {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  background: transparent;
+  border: 1px solid #38bdf8;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #38bdf8;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.resumeButton:hover {
+  background-color: #38bdf8;
+  color: #0d1117;
+}
+
+/* Availability Card */
+.availabilityCard { border-left: 3px solid #22c55e; }
+.availabilityHeader { display: flex; align-items: center; gap: 0.75rem; }
+.availabilityDot { width: 8px; height: 8px; border-radius: 9999px; background-color: #22c55e; animation: pulse-glow 2s infinite; flex-shrink: 0; }
+.availabilityCard .infoTitle { margin-bottom: 0.25rem; }

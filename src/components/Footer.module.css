@@ -1,0 +1,197 @@
+/* Footer.module.css */
+
+/* --- KEYFRAMES --- */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0);
+  }
+}
+
+/* --- MAIN FOOTER STYLES --- */
+.footer {
+  background-color: #1c2128; /* bg-card */
+  border-top: 1px solid #30363d; /* border-border */
+  color: #e6edf3;
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.mainGrid {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #30363d;
+}
+
+@media (min-width: 768px) {
+  .mainGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- COLUMNS --- */
+.brandColumn,
+.linksColumn,
+.contactColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.brandLogo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-image: linear-gradient(90deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.brandDescription {
+  color: #8b949e;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.socialsList {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.socialLink {
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background-color: rgba(48, 54, 61, 0.5);
+  color: #c9d1d9;
+  transition: all 0.2s ease;
+}
+
+.socialLink:hover {
+  background-color: #38bdf8;
+  color: #0d1117;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+}
+
+.columnTitle {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quickLink {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #8b949e;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.quickLink:hover {
+  color: #38bdf8;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #8b949e;
+}
+
+.availability {
+  padding-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.availabilityDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: #22c55e;
+  animation: pulse-glow 2s infinite;
+}
+
+.availabilityText {
+  color: #22c55e;
+  font-weight: 500;
+}
+
+/* --- BOTTOM BAR --- */
+.bottomBarContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .bottomBarContent {
+    flex-direction: row;
+  }
+}
+
+.copyright,
+.footerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #8b949e;
+}
+
+.madeWithHeart {
+  color: #ef4444; /* red-500 */
+  animation: pulse-glow 2s infinite;
+}
+
+.separator {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .separator {
+    display: inline;
+  }
+}
+
+.backToTopButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #8b949e;
+  transition: color 0.2s ease;
+  font-size: 0.875rem;
+}
+
+.backToTopButton:hover {
+  color: #38bdf8;
+}
