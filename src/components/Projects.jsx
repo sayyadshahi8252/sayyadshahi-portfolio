@@ -3,7 +3,6 @@ import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 import styles from './Projects.module.css';
 
-// Corrected project data with public folder paths
 const allProjects = [
   {
     title: "Velora - E-commerce Platform",
@@ -43,7 +42,7 @@ const allProjects = [
   }
 ];
 
-// Memoized Project Card
+
 const ProjectCard = memo(({ project, index }) => {
   const cardVariants = {
     hidden: { y: 30, opacity: 0 },

@@ -1,6 +1,4 @@
-/* Button.module.css */
 
-/* Base button styles */
 .button {
   display: inline-flex;
   align-items: center;
@@ -26,25 +24,24 @@
   opacity: 0.5;
 }
 
-/* --- Variants --- */
 .default {
-  background-color: #38bdf8; /* Primary blue */
-  color: #0d1117; /* Dark text */
+  background-color: #38bdf8; 
+  color: #0d1117;
 }
 .default:hover {
   opacity: 0.9;
 }
 
 .outline {
-  border: 1px solid #4a5568; /* Default border color */
+  border: 1px solid #4a5568; 
   background-color: transparent;
 }
 .outline:hover {
-  background-color: #2d3748; /* Darker accent on hover */
+  background-color: #2d3748; 
   color: #e2e8f0;
 }
 
-/* --- Sizes --- */
+
 .sizeDefault {
   height: 2.5rem;
   padding: 0.5rem 1rem;

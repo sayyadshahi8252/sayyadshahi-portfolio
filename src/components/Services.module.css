@@ -1,6 +1,4 @@
-/* Services.module.css */
 
-/* --- KEYFRAME ANIMATIONS --- */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -10,7 +8,6 @@
   to { opacity: 1; }
 }
 
-/* --- SECTION STYLES --- */
 .servicesSection {
   padding: 5rem 0;
   background-color: #0d1117;
@@ -22,7 +19,6 @@
   padding: 0 1.5rem;
 }
 
-/* --- HEADER STYLES --- */
 .sectionHeader {
   text-align: center;
   margin-bottom: 4rem;
@@ -46,7 +42,6 @@
   margin: 0 auto;
 }
 
-/* --- SERVICES GRID & CARD --- */
 .servicesGrid {
   display: grid;
   column-gap: 2rem;
@@ -84,14 +79,14 @@
   margin-bottom: 1.5rem;
   font-size: 0.875rem;
   line-height: 1.6;
-  flex-grow: 1; /* This is the fix: makes the description expand */
+  flex-grow: 1; 
 }
 
 .featuresList {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  /* margin-top: auto; and padding-top have been removed */
+
 }
 .featureItem {
   display: flex;
@@ -105,7 +100,6 @@
   flex-shrink: 0;
 }
 
-/* --- PROCESS SECTION --- */
 .processSection {
   text-align: center;
   margin-top: 5rem; 
@@ -147,7 +141,6 @@
   color: #8b949e;
 }
 
-/* --- CTA SECTION --- */
 .ctaSection {
   text-align: center;
   background-image: linear-gradient(to right, rgba(56, 189, 248, 0.1), rgba(167, 139, 250, 0.1));

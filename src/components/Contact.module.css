@@ -1,11 +1,10 @@
-/* Contact.module.css */
+
 
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
   50% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
 }
 
-/* --- SECTION & HEADER --- */
 .contactSection {
   padding: 5rem 0;
   background-color: #0d1117;
@@ -24,7 +23,6 @@
 .gradientText { background-image: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .sectionSubtitle { color: #8b949e; font-size: 1.125rem; max-width: 42rem; margin: 0 auto; }
 
-/* --- MAIN LAYOUT --- */
 .mainGrid {
   display: grid;
   gap: 2rem;
@@ -36,7 +34,7 @@
   }
 }
 
-/* --- FORM STYLES --- */
+
 .formCard {
   background-color: #161b22;
   border: 1px solid #30363d;
@@ -78,7 +76,7 @@
 .submitButton:disabled { background: #4a5568; cursor: not-allowed; }
 .formResult { text-align: center; font-weight: 500; min-height: 1.25rem; margin-top: 1rem; color: #38bdf8; }
 
-/* --- INFO CARDS (Right Column) --- */
+
 .rightColumn { display: flex; flex-direction: column; gap: 2rem; }
 .infoCard {
   background-color: #161b22;
@@ -106,7 +104,6 @@
   background-color: #38bdf8; color: #ffffff; transform: translateY(-3px); border-color: #38bdf8;
 }
 
-/* ADDED: Style for the resume button */
 .resumeButton {
   width: 100%;
   display: inline-flex;
@@ -128,7 +125,7 @@
   color: #0d1117;
 }
 
-/* Availability Card */
+
 .availabilityCard { border-left: 3px solid #22c55e; }
 .availabilityHeader { display: flex; align-items: center; gap: 0.75rem; }
 .availabilityDot { width: 8px; height: 8px; border-radius: 9999px; background-color: #22c55e; animation: pulse-glow 2s infinite; flex-shrink: 0; }

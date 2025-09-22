@@ -63,7 +63,6 @@ const Contact = () => {
         </motion.div>
 
         <div className={styles.mainGrid}>
-          {/* Left Column: Contact Form */}
           <motion.div 
             className={styles.formCard}
             initial={{ opacity: 0, x: -30 }}
@@ -97,7 +96,6 @@ const Contact = () => {
             </form>
           </motion.div>
 
-          {/* Right Column: Info Cards */}
           <motion.div 
             className={styles.rightColumn}
             variants={containerVariants}
@@ -120,7 +118,6 @@ const Contact = () => {
               </div>
             </motion.div>
 
-            {/* ADDED THIS SECTION BACK IN */}
             <motion.div variants={itemVariants} className={styles.infoCard}>
               <h3 className={styles.infoTitle}>Download Resume</h3>
               <p className={styles.infoDescription}>Get a detailed overview of my experience, skills, and projects.</p>

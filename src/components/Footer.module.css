@@ -1,6 +1,4 @@
-/* Footer.module.css */
 
-/* --- KEYFRAMES --- */
 @keyframes pulse-glow {
   0%, 100% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
@@ -10,10 +8,9 @@
   }
 }
 
-/* --- MAIN FOOTER STYLES --- */
 .footer {
-  background-color: #1c2128; /* bg-card */
-  border-top: 1px solid #30363d; /* border-border */
+  background-color: #1c2128; 
+  border-top: 1px solid #30363d; 
   color: #e6edf3;
 }
 
@@ -37,7 +34,6 @@
   }
 }
 
-/* --- COLUMNS --- */
 .brandColumn,
 .linksColumn,
 .contactColumn {
@@ -143,7 +139,6 @@
   font-weight: 500;
 }
 
-/* --- BOTTOM BAR --- */
 .bottomBarContent {
   display: flex;
   flex-direction: column;
@@ -168,7 +163,7 @@
 }
 
 .madeWithHeart {
-  color: #ef4444; /* red-500 */
+  color: #ef4444; 
   animation: pulse-glow 2s infinite;
 }
 

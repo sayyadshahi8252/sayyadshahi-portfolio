@@ -3,8 +3,7 @@ import { GraduationCap, MapPin, User } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import styles from './About.module.css';
 
-// --- Data Constants ---
-// By moving data outside, the component becomes cleaner and data is easier to manage.
+
 const statsData = [
   { value: 15, label: "Projects Completed" },
   { value: 3, label: "Years Learning" },
@@ -28,8 +27,7 @@ const educationData = [
   }
 ];
 
-// --- Animation Variants ---
-// Defined outside the component to prevent re-creation on every render.
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -47,8 +45,7 @@ const itemVariants = {
   },
 };
 
-// --- Child Component ---
-// Optimized to receive isInView as a prop instead of having its own hook.
+
 const AnimatedStat = ({ value, label, isInView }) => {
   return (
     <motion.div
@@ -63,9 +60,8 @@ const AnimatedStat = ({ value, label, isInView }) => {
   );
 };
 
-// --- Main Component ---
 const About = () => {
-  // A single ref and hook now control all animations in this section.
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 

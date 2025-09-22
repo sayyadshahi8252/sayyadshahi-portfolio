@@ -33,9 +33,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        {/* Main Footer Content */}
         <div className={styles.mainGrid}>
-          {/* Brand & Description */}
           <div className={styles.brandColumn}>
             <div className={styles.brandLogo} onClick={scrollToTop} role="button" tabIndex={0}>
               Sayyad Shahi
@@ -56,7 +54,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div className={styles.linksColumn}>
             <h3 className={styles.columnTitle}>Quick Links</h3>
             <ul className={styles.linksList}>
@@ -70,7 +67,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div className={styles.contactColumn}>
             <h3 className={styles.columnTitle}>Get In Touch</h3>
             <div className={styles.contactList}>
@@ -85,16 +81,15 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-       {/* Bottom Bar */}
+
         <div className={styles.bottomBar}>
           <div className={styles.bottomBarContent}>
-            {/* Left Side: Copyright */}
+
             <div className={styles.copyright}>
               <span>© {currentYear} Sayyad Shahi. All Rights Reserved.</span>
             </div>
             
-            {/* Right Side: Tech & Back to Top */}
+         
             <div className={styles.footerActions}>
 
               <button onClick={scrollToTop} className={styles.backToTopButton}>

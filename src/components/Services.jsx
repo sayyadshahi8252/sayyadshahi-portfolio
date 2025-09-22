@@ -59,7 +59,7 @@ const Services = () => {
     { step: "4", title: "Deployment", desc: "Testing, deployment, and ongoing support" }
   ];
 
-  // Maps the color names from your data to the CSS module classes
+ 
   const colorMap = {
     'text-primary': styles.iconPrimary,
     'text-accent': styles.iconAccent,
@@ -73,7 +73,6 @@ const Services = () => {
   return (
     <section id="services" className={styles.servicesSection}>
       <div className={styles.container}>
-        {/* Section Header */}
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>
             My <span className={styles.gradientText}>Services</span>
@@ -84,7 +83,6 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
         <div className={styles.servicesGrid}>
           {services.map((service, index) => {
             const Icon = service.icon;
@@ -112,7 +110,6 @@ const Services = () => {
           })}
         </div>
 
-        {/* Process Section */}
         <div className={styles.processSection}>
           <h3 className={styles.processTitle}>My Development Process</h3>
           <div className={styles.processGrid}>
@@ -132,7 +129,6 @@ const Services = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
         <div className={styles.ctaSection}>
           <h3 className={styles.ctaTitle}>Ready to Start Your Project?</h3>
           <p className={styles.ctaText}>

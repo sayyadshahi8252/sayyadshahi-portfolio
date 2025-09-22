@@ -1,9 +1,5 @@
 import React from 'react';
-import styles from './Card.module.css'; // Import the new CSS module
-
-// Each Card component is forwardRef'd to allow parent components to get a ref to the DOM element.
-// The className prop is combined with the module's style for flexibility.
-
+import styles from './Card.module.css'; 
 const Card = React.forwardRef(({ className, ...props }, ref) => (
   <div ref={ref} className={`${styles.card} ${className || ''}`} {...props} />
 ));

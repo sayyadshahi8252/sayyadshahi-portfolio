@@ -4,7 +4,7 @@ import styles from './Skills.module.css';
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const skillsRef = useRef(null); // Create a ref for the section element
+  const skillsRef = useRef(null); 
 
   const skillCategories = [
     {
@@ -54,21 +54,20 @@ const Skills = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // When the element is in view, set isVisible to true
+        
         if (entry.isIntersecting) {
           setIsVisible(true);
-          // Stop observing once it's visible to prevent re-triggering
+          
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.1 } // Trigger when 10% of the element is visible
+      { threshold: 0.1 } 
     );
 
     if (skillsRef.current) {
       observer.observe(skillsRef.current);
     }
 
-    // Cleanup function to unobserve the element
     return () => {
       if (skillsRef.current) {
         observer.unobserve(skillsRef.current);
@@ -79,7 +78,6 @@ const Skills = () => {
   return (
     <section id="skills" className={styles.skillsSection} ref={skillsRef}>
       <div className={styles.container}>
-        {/* Section Header */}
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>
             My <span className={styles.gradientText}>Skills</span>
@@ -90,7 +88,6 @@ const Skills = () => {
           </p>
         </div>
 
-        {/* Skills Grid */}
         <div className={styles.skillsGrid}>
           {skillCategories.map((category, categoryIndex) => (
             <Card
@@ -126,7 +123,6 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Certifications Section */}
         <div className={styles.certificationsSection}>
           <h3 className={styles.certificationsTitle}>
             Certifications & Training
