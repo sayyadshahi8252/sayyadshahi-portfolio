@@ -5,9 +5,18 @@ import styles from './Projects.module.css';
 
 const allProjects = [
   {
+    title: "Advocate Portfolio Website",
+    description: "A professional portfolio website for an advocate, built with modern frontend technologies to showcase services, expertise, and contact information.",
+    tech: [ "React.js", "CSS3", "Responsive Design", "Vercel Deployment" ],
+    image: "/projects/advocate-portfolio.webp",
+    liveDemo: "https://advocate-shweta-punia.vercel.app/",
+    github: "https://github.com/sayyadshahi8252/", 
+    category: "Frontend"
+  },
+  {
     title: "Velora - E-commerce Platform",
     description: "A full-stack e-commerce platform built with React.js, Node.js, and MongoDB...",
-    tech: ["React.js", "Node.js", "MongoDB", "Express.js", "JWT", "Cloudinary"],
+    tech: [ "React.js", "Node.js", "MongoDB", "Express.js", "JWT", "Cloudinary" ],
     image: "/projects/velora.webp",
     liveDemo: "https://velora-frontend-iota.vercel.app/",
     github: "https://github.com/sayyadshahi8252/velora",
@@ -16,7 +25,7 @@ const allProjects = [
   {
     title: "Grozee - Online Grocery Platform",
     description: "A modern grocery shopping platform with responsive design, optimized for fast load times...",
-    tech: ["React.js", "CSS3", "JavaScript", "Responsive Design"],
+    tech: [ "React.js", "CSS3", "JavaScript", "Responsive Design" ],
     image: "/projects/Grozee.webp",
     liveDemo: "https://grozee.vercel.app/",
     github: "https://github.com/sayyadshahi8252/grozee",
@@ -25,7 +34,7 @@ const allProjects = [
   {
     title: "UniVision - University Portal",
     description: "A comprehensive university portal featuring modern UI/UX design, responsive layout...",
-    tech: ["React.js", "TypeScript", "Tailwind CSS", "React Router"],
+    tech: [ "React.js", "TypeScript", "Tailwind CSS", "React Router" ],
     image: "/projects/univision.webp",
     liveDemo: "https://uni-vision-lusk.vercel.app/",
     github: "https://github.com/sayyadshahi8252/univision",
@@ -34,7 +43,7 @@ const allProjects = [
   {
     title: "Automation Workflows",
     description: "Custom automation solutions built with n8n, integrating various APIs and services...",
-    tech: ["n8n", "APIs", "Webhooks", "Database Integration"],
+    tech: [ "n8n", "APIs", "Webhooks", "Database Integration" ],
     image: "/projects/n8nproject.webp",
     liveDemo: "https://www.linkedin.com/posts/sayyadshahi_n8n-automation-ai-activity-7368621387172806659-BAAy?utm_source=share&utm_medium=member_desktop&rcm=ACoAADnfxUMBb6PjTl9yhEdjgqVqp6Y-9IoMev8",
     github: "#",
@@ -96,9 +105,9 @@ const ProjectCard = memo(({ project, index }) => {
 });
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('All');
-  const [filteredProjects, setFilteredProjects] = useState(allProjects);
-  const categories = ['All', 'Full-Stack', 'Frontend', 'Automation'];
+  const [ activeFilter, setActiveFilter ] = useState('All');
+  const [ filteredProjects, setFilteredProjects ] = useState(allProjects);
+  const categories = [ 'All', 'Full-Stack', 'Frontend', 'Automation' ];
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -109,7 +118,7 @@ const Projects = () => {
     } else {
       setFilteredProjects(allProjects.filter(p => p.category === activeFilter));
     }
-  }, [activeFilter]);
+  }, [ activeFilter ]);
 
   return (
     <section id="projects" className={styles.projectsSection} ref={ref}>
